@@ -2,19 +2,24 @@
 
 
 var React = require('react');
-var links = ['welcome', 'cookies', 'fish', 'bears', 'beer'];
+var links = ['Welcome', 'Cookies', 'Fish', 'Bears', 'Beer'];
 
 
 var NavBar = React.createClass({
+	
 	render: function () {
+		var link = links.map(function(item){
+		return (
+			<a className="nav-item nav-link" href="#">{ item }</a>	
+			)
+	})
+
+
 		return(
 			<div>
 				<nav className="navbar navbar-light bg-faded">
   					<div className="nav navbar-nav">
-    					<a className="nav-item nav-link active" href="#">Practice<span className="sr-only">(current)</span></a>
-    					<a className="nav-item nav-link" href="#">Features</a>
-    					<a className="nav-item nav-link" href="#">Pricing</a>
-    					<a className="nav-item nav-link" href="#">About</a>
+    					{ link }
   					</div>
 				</nav>
 			</div>
