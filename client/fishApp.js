@@ -65,9 +65,9 @@ var FishApp = React.createClass({
 		}).done(function(data){
 		//update fish state with data
 		//console.log(data);
-			self.setState({
-				data: data
-			})
+			setTimeout(function(){self.setState({
+				fishArray: data})
+			}, 2000);
 		})
 	},
 
