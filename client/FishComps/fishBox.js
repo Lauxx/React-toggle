@@ -5,12 +5,14 @@
 */	
 
 var React = require('react');
+var FishList = require('./fishList');
 
 var FishBox = React.createClass({
 	render: function(){
+		console.log("found fish!", this.props.fishArray)
 		return (
 			<div>
-			<h1>I am the fish box </h1>
+			<FishList fishArray={ this.props.fishArray } />
 			</div>
 			)
 	}

@@ -67,7 +67,7 @@ var FishApp = React.createClass({
 		//console.log(data);
 			setTimeout(function(){self.setState({
 				fishArray: data})
-			}, 2000);
+			}, 1000);
 		})
 	},
 
@@ -86,7 +86,7 @@ var FishApp = React.createClass({
 				<Toggle/>
 				</div>
 				<div>
-				<FishBox/>
+				<FishBox fishArray={ this.state.fishArray }/>
 				</div>
 			</div>
 			)
