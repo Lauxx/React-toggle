@@ -12,9 +12,10 @@ var NavBar = require('./navbar');
 var Footer = require('./footer');
 var Welcome = require('./welcome');
 var Cookies = require('./cookies');
-var Fish = require('./fish');
+var FishApp = require('./fishApp');
 var Beer = require('./beer');
 var Bears = require('./bear');
+
 
 require('./stylesheets/main.scss')
 
@@ -43,7 +44,7 @@ var App = React.createClass({
         		return <Cookies/>
         		break;
         	case 'Fish':
-        		return <Fish/>
+        		return <FishApp/>
         		break;
         	case 'Beer':
         		return <Beer/>
@@ -67,7 +68,7 @@ var App = React.createClass({
       </div>
       )
   }
-})
+});
 
 React.render(
   <App />, document.getElementById('app')
