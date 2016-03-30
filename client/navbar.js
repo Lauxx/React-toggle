@@ -8,9 +8,11 @@ var links = ['Welcome', 'Cookies', 'Fish', 'Bears', 'Beer'];
 var NavBar = React.createClass({
 	
 	render: function () {
+		var self = this;
 		var link = links.map(function(item){
 		return (
-			<a className="nav-item nav-link" href="#">{ item }</a>	
+			<a className="nav-item nav-link" 
+			onClick={ self.props.setActiveComponent.bind(null, item) }>{ item }</a>	
 			)
 	})
 

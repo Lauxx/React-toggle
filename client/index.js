@@ -1,7 +1,7 @@
 /*
 Index
 	NavBar
-
+	Footer
 */
 
 
@@ -12,6 +12,9 @@ var NavBar = require('./navbar');
 var Footer = require('./footer');
 var Welcome = require('./welcome');
 var Cookies = require('./cookies');
+var Fish = require('./fish');
+var Beer = require('./beer');
+var Bears = require('./bear');
 
 require('./stylesheets/main.scss')
 
@@ -30,13 +33,27 @@ var App = React.createClass({
 		})
 	},
 
-
+	// shorthand if statements 
   	showWhichComponent: function(){
-  		if(this.state.activeComponent && this.state.activeComponent === 'welcome'){
-  			return <Welcome/>
-  		} else {
-  			return <Cookies/>
-  		};
+  		switch(this.state.activeComponent) {
+    		case 'Welcome':
+        		return <Welcome/>
+        		break;
+    		case 'Cookies':
+        		return <Cookies/>
+        		break;
+        	case 'Fish':
+        		return <Fish/>
+        		break;
+        	case 'Beer':
+        		return <Beer/>
+        		break;
+        	case 'Bears':
+        		return <Bears/>
+        		break;			
+    		default:
+        	 return <Welcome/>
+		}
 
   	}, 
 
