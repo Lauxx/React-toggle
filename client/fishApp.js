@@ -22,22 +22,7 @@ var Jumbotron = React.createClass({
 	}
 });
 
-var Toggle = React.createClass({
-	render: function(){
-		return(
-			<div className="btn-group" data-toggle="buttons">
-  				<label className="btn btn-primary active">
-    				<input type="radio"/> Fish List
-  				</label>
-  				<label className="btn btn-primary">
-    				<input type="radio"/> Enter Fish
-  				</label>
-  				
-			</div>
 
-			)
-	}
-});
 
 var Loader = React.createClass({
 	render: function(){
@@ -82,9 +67,6 @@ var FishApp = React.createClass({
 			<div>
 				<div>
 				<Jumbotron/>
-				</div>
-				<div>
-				<Toggle/>
 				</div>
 				<div>
 				<FishBox fishArray={ this.state.fishArray }/>
