@@ -13,6 +13,7 @@ var FishForm = React.createClass({
 		return(
 			<div className="container col-sm-6 col-sm-offset-3">
 			<form>
+			<legend>Enter new Fish!</legend>
   				<fieldset className="form-group">
     				<label for="formGroupExampleInput">Name</label>
     				<input type="text" className="form-control" id="formGroupExampleInput" placeholder="Species Name"/>
