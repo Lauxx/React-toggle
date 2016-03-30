@@ -6,8 +6,21 @@ body {
   background: $primary-color;
 }
 
-.img{
+
+
+.fish-flex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.img-flex{
+	justify-content: center;
+	display: block;
 	height: 150px;
 	width: 150px;
 }
 
+.my-container{
+	margin-bottom: 10%;
+}

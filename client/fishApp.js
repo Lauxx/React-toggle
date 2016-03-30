@@ -1,8 +1,9 @@
-/* FISH
-	JUMBOTRON
-	TOGGLE FISH
-	DISPLAY FISH
-	EDIT FISH */	
+/*FishApp
+	FishBox
+		FishForm
+		FishList
+			FishCard
+*/	
 
 
 
@@ -29,7 +30,7 @@ var Toggle = React.createClass({
     				<input type="radio"/> Fish List
   				</label>
   				<label className="btn btn-primary">
-    				<input type="radio"/> Fish Edit
+    				<input type="radio"/> Enter Fish
   				</label>
   				
 			</div>

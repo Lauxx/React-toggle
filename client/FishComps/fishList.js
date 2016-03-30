@@ -1,3 +1,11 @@
+/*FishApp
+	FishBox
+		FishForm
+		FishList
+			FishCard
+*/
+
+
 var React = require('react');
 var FishCard = require('./fishCard');
 
@@ -13,7 +21,7 @@ var FishList = React.createClass({
 					img={ item.img } />
 		})
 		return (
-			<div>
+			<div className="fish-flex">
 				{ fish }
 			</div>
 			)
