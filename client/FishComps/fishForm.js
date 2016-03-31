@@ -11,8 +11,8 @@ var FishForm = React.createClass({
 
 	render: function(){
 		return(
-			<div className="container col-sm-6 col-sm-offset-3">
-			<form>
+			<div className="container">
+			<form className="col-sm-6">
 			<legend>Enter new Fish!</legend>
   				<fieldset className="form-group">
     				<label for="formGroupExampleInput">Name</label>
