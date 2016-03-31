@@ -55,7 +55,7 @@ var FishForm = React.createClass({
 			return; 
 		} else {
 		this.props.handleNewFishPost(fish);
-		this.setState({ name: '', color: '', length: '', img: '' });
+		this.setState({ name: '', color: '', people_eater: '', length: '', img: '' });
 
 		alert('Success! You have added a new fish.');
 		}
