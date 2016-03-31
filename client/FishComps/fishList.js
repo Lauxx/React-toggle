@@ -1,20 +1,21 @@
 /*FishApp
 	FishBox
 		FishData
-		FishForm
-		FishList
-			FishCard
+			FishList
+				FishCard
+		FishFormData
+			FishForm
 */
 
 
 var React = require('react');
 var FishCard = require('./fishCard');
 
-var FishList = React.createClass({
-	render: function(){
+function FishList(props){
 		//map through our data and pass it to fish card
-		var fish = this.props.fishArray.map(function(item){
+		var fish = props.fishArray.map(function(item){
 			return <FishCard
+					key={ item._id }
 					name={ item.name }
 					color={ item.color }
 					people_eater={ item.people_eater }
@@ -26,7 +27,10 @@ var FishList = React.createClass({
 				{ fish }
 			</div>
 			)
-	}
-});
+	};
+
+FishList.propTypes = {
+	fishArray: React.PropTypes.array.isRequired
+};
 
 module.exports = FishList;

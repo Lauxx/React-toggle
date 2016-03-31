@@ -7,7 +7,7 @@ Index
 
 
 var React = require('react');
-var ReactDom = require('react-dom');
+var ReactDOM = require('react-dom');
 var NavBar = require('./navbar');
 var Footer = require('./footer');
 var Welcome = require('./welcome');
@@ -70,6 +70,6 @@ var App = React.createClass({
   }
 });
 
-React.render(
+ReactDOM.render(
   <App />, document.getElementById('app')
 );

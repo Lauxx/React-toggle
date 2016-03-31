@@ -1,14 +1,16 @@
 /*FishApp
 	FishBox
 		FishData
-		FishForm
-		FishList
-			FishCard
-*/	
+			FishList
+				FishCard
+		FishFormData
+			FishForm
+*/
 
 var React = require('react');
-var FishList = require('./fishList');
-var FishForm = require('./fishForm');
+
+var FishData = require('./fishData');
+var FishFormData = require('./fishFormData');
 
 
 
@@ -33,11 +35,12 @@ var FishBox = React.createClass({
 
 	showComp: function(){
 		if(this.state.activeComponent === 'fish'){
-			return <FishList fishArray={ this.props.fishArray } />
+			console.log(this.state.activeComponent);
+			return <FishData/>
 		} else if (this.state.activeComponent ==='form'){
-			return <FishForm handleNewFishPost={ this.props.handleNewFishPost }/>
+			return <FishFormData toggleActiveComp={ this.toggleActiveComp }/>
 		} else {
-			return <FishList fishArray={ this.props.fishArray } />
+			throw new Error('No active Component', this.state.activeComponent);
 		}
 	},
 
@@ -46,7 +49,7 @@ var FishBox = React.createClass({
 	},
 
 	render: function(){
-		console.log("found fish!", this.props.fishArray)
+		
 		return (
 			<div className="my-container">
 			<Toggle toggleActiveComp = { this.toggleActiveComp }/>
