@@ -13,7 +13,7 @@ var Footer = require('./footer');
 var Welcome = require('./welcome');
 var Cookies = require('./cookies');
 var FishApp = require('./fishApp');
-var Beer = require('./beer');
+var Beer = require('./beerApp');
 var Bears = require('./bear');
 
 

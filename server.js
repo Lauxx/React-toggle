@@ -6,6 +6,8 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/fish');
 var fishRoutes = require('./routes/fish');
 
+var beerRoutes = require('./routes/beer');
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -37,6 +39,8 @@ app.get('/', function(req, res) {
 
 var port = process.env.PORT || 3000;
 
+
+app.use('/api/beer', beerRoutes);
 app.use('/api/fish', fishRoutes);
 app.listen(port, function(){
   console.log("🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥\n🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 fired up 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 \n🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥 on " + port + " 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥\n🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥")

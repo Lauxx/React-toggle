@@ -1,3 +1,13 @@
+/*Beer
+	BeerBox
+		BeerForm
+		BeerList
+			BeerCard
+*/
+
+
+
+
 var React = require('react');
 
 var Beer = React.createClass({
