@@ -89,6 +89,7 @@ var FishForm = React.createClass({
   				<fieldset className="form-group">
     				<label for="formGroupExampleInput2">People Eater</label>
     				<select onChange={ this.handlePeopleEaterChange } className="form-control">
+    					<option disabled selected value>Choose One</option>
     					<option value={ true }>yes</option>
     					<option value={ false }>no</option>
     				</select>	
@@ -107,3 +108,5 @@ var FishForm = React.createClass({
 });
 
 module.exports = FishForm;
+
+
