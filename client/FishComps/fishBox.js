@@ -34,7 +34,7 @@ var FishBox = React.createClass({
 		if(this.state.activeComponent === 'fish'){
 			return <FishList fishArray={ this.props.fishArray } />
 		} else if (this.state.activeComponent ==='form'){
-			return <FishForm />
+			return <FishForm handleNewFishPost={ this.props.handleNewFishPost }/>
 		} else {
 			return <FishList fishArray={ this.props.fishArray } />
 		}

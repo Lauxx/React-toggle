@@ -57,6 +57,23 @@ var FishApp = React.createClass({
 		})
 	},
 
+	handleNewFishPost: function(fish){
+		
+		$.ajax({
+			url: '/api/fish',
+			dataType: 'json',
+			type: 'POST',
+			data: fish,
+			success: function(data){
+				this.loadFishFromServer();
+				console.log(data);
+			}.bind(this),
+			error: function(xhr, status, err){
+				console.error('/api/fish', status, err.toString())
+			}.bind(this)
+		})
+	},
+
 	componentDidMount: function(){
 		this.loadFishFromServer();
 	},
@@ -69,7 +86,7 @@ var FishApp = React.createClass({
 				<Jumbotron/>
 				</div>
 				<div>
-				<FishBox fishArray={ this.state.fishArray }/>
+				<FishBox fishArray={ this.state.fishArray } handleNewFishPost={ this.handleNewFishPost }/>
 				</div>
 			</div>
 			)
