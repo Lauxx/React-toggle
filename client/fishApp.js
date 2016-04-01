@@ -5,6 +5,8 @@
 				FishCard
 		FishFormData
 			FishForm
+		FishDetailsData
+			FishDetails	
 */
 
 

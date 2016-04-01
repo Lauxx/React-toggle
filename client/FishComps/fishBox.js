@@ -5,40 +5,45 @@
 				FishCard
 		FishFormData
 			FishForm
+		FishDetailsData
+			FishDetails	
 */
 
 var React = require('react');
 
 var FishData = require('./fishData');
 var FishFormData = require('./fishFormData');
+var FishDetailsData = require('./fishDetailsData');
+var Toggle = require('./toggle');
 
 
 
-var Toggle = React.createClass({
-	render: function(){
-		return(
-			<div className="btn-group" data-toggle="buttons">
-  				<a href="#" className="btn btn-primary" onClick={ this.props.toggleActiveComp.bind(null, 'fish') }>Fish List</a>
-  				<a href="#" className="btn btn-primary" onClick={ this.props.toggleActiveComp.bind(null, 'form') }>Enter Fish</a>
-			</div>
-
-			)
-	}
-});
 
 var FishBox = React.createClass({
 	getInitialState: function(){
 		return{
-			activeComponent: 'fish'
+			activeComponent: 'fish',
+			activeFishId: null,
 		}
 	},
 
+	getId: function(id){
+		return this.setState({activeFishId: id, activeComponent: 'oneFish'})
+	},
+
 	showComp: function(){
+		//console.log(this.state.activeComponent);
+		console.log(this.state.activeFishId);
 		if(this.state.activeComponent === 'fish'){
-			console.log(this.state.activeComponent);
-			return <FishData/>
+			return <FishData getId={ this.getId } />
+
 		} else if (this.state.activeComponent ==='form'){
 			return <FishFormData toggleActiveComp={ this.toggleActiveComp }/>
+
+		} else if (this.state.activeComponent === 'oneFish'){
+
+			return <FishDetailsData  id={ this.state.activeFishId } />
+
 		} else {
 			throw new Error('No active Component', this.state.activeComponent);
 		}
@@ -51,7 +56,7 @@ var FishBox = React.createClass({
 	render: function(){
 		
 		return (
-			<div className="my-container">
+			<div className="my-container container">
 			<Toggle toggleActiveComp = { this.toggleActiveComp }/>
 			{ this.showComp() }
 			</div>

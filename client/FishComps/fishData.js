@@ -5,6 +5,8 @@
 				FishCard
 		FishFormData
 			FishForm
+		FishDetailsData
+			FishDetails	
 */
 
 
@@ -14,7 +16,7 @@ var FishList = require('./fishList');
 var FishData = React.createClass({
 	//null makes it easier to manage state
 	getInitialState: function(){
-		return{
+		return {
 			fishArray: null
 		}
 	},
@@ -28,9 +30,7 @@ var FishData = React.createClass({
 		}).done(function(data){
 		//update fish state with data
 		//console.log(data);
-			setTimeout(function(){self.setState({
-				fishArray: data})
-			}, 1000);
+			self.setState({ fishArray: data });
 		})
 	},
 
@@ -39,7 +39,7 @@ var FishData = React.createClass({
 	},
 
 	render: function(){
-		return this.state.fishArray ? <FishList fishArray={ this.state.fishArray }/> : null;
+		return this.state.fishArray ? <FishList getId={ this.props.getId } fishArray={ this.state.fishArray }/> : null;
 	}
 });
 

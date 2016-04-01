@@ -5,6 +5,8 @@
 				FishCard
 		FishFormData
 			FishForm
+		FishDetailsData
+			FishDetails	
 */
 
 
@@ -15,6 +17,8 @@ function FishList(props){
 		//map through our data and pass it to fish card
 		var fish = props.fishArray.map(function(item){
 			return <FishCard
+					getId={ props.getId }
+					id={ item._id }
 					key={ item._id }
 					name={ item.name }
 					color={ item.color }
