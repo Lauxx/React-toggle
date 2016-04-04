@@ -22,7 +22,8 @@ function FishCard(props){
     						<h4 className="card-title">{ props.name }</h4>
     						<p className="card-text">{ props.color }</p>
     						<p className="card-text">{ props.length }</p>
-    						<button onClick={ props.getId.bind(null, props.id) } className="btn btn-primary">Get fish</button>
+    						<button onClick={ props.getId.bind(null, props.id) } className="btn btn-primary">Get fish</button><br/>
+  							<button onClick={ props.deleteFish.bind(null, props.id) } className="btn btn-warning"> Delete Fish</button>
   						</div>
 				</div>
 			</div>

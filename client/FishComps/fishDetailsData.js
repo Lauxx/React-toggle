@@ -19,6 +19,8 @@ var FishDetailsData = React.createClass({
 		}
 	},
 
+	
+
 	loadOneFishFromServer: function(){
 		var self = this;
 		$.ajax({
