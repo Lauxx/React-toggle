@@ -11,8 +11,8 @@ var NavBar = React.createClass({
 		var self = this;
 		var link = links.map(function(item){
 		return (
-			<a className="nav-item nav-link" 
-			onClick={ self.props.setActiveComponent.bind(null, item) }>{ item }</a>	
+			<p className="nav-item nav-link" 
+			onClick={ self.props.setActiveComponent.bind(null, item) }>{ item } <br/></p>	
 			)
 	})
 
@@ -21,7 +21,9 @@ var NavBar = React.createClass({
 			<div>
 				<nav className="navbar navbar-light bg-faded">
   					<div className="nav navbar-nav">
-    					{ link }
+    					
+    					 { link } 
+    					
   					</div>
 				</nav>
 			</div>

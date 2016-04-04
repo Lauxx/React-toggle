@@ -17,7 +17,7 @@ var Beer = require('./beerApp');
 var Bears = require('./bear');
 var Notifier = require('./notifier');
 
-require('./stylesheets/main.scss')
+require('./stylesheets/main.scss');
 
 
 var App = React.createClass({
