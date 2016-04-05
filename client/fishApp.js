@@ -6,7 +6,9 @@
 		FishFormData
 			FishForm
 		FishDetailsData
-			FishDetails	
+			FishDetails
+		EditFishData
+			EditFishForm		
 */
 
 
