@@ -40,10 +40,10 @@ var EditFishForm = React.createClass({
   				</fieldset>
   				<fieldset className="form-group">
     				<label for="formGroupExampleInput2">People Eater</label>
-    				<select onChange={ this.props.onPeopleEaterChange } value={ this.props.people_eater }className="form-control">
-    					<option disabled selected value> Select One </option>
-    					<option value={ true }>yes</option>
-    					<option value={ false }>no</option>
+    				<select onChange={ this.props.onPeopleEaterChange } value={ this.props.people_eater } className="form-control">
+    					
+    					<option value={ true }>yes/true</option>
+    					<option value={ false }>no/false</option>
     				</select>	
     			</fieldset>	
   				 <fieldset className="form-group">
