@@ -6,6 +6,7 @@ var Bears = React.createClass({
 		return(
 			<div className="jumbotron">
 			<h1> Bears Bears Bears Bears</h1>
+			
 			</div>
 
 			)

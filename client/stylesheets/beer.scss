@@ -1,0 +1,42 @@
+@import 'colors';
+ 
+@mixin standard-button {
+   display: inline-block;
+   padding: 8px 16px;
+   font-size: 12px;
+   font-weight: bold;
+   color: $darkPurple;
+   text-transform: uppercase;
+   background-color: $primary-lighten;
+   border: 1px solid $primary-darken ;
+   transition: all 0.3s ease-in-out;
+   
+   &:hover {
+       background-color: $background;
+       color: $foreground;
+   }
+}
+
+//like a function can pass in color &
+//secondary beer button is calling orange
+@mixin custom-button-theme($color){
+	@include standard-button
+	background-color: $color;
+
+}
+//calling the above function to pass in orange
+//as the background color
+.secondary-beer-button{
+	@include custom-button-theme(pink);
+}
+
+.beer-button{
+	@include standard-button
+	font-size: 2.5em;
+	//em=16px size standard with fonts - better to use than pixels; 
+	//relative to screen size
+}
+
+.fish-button{
+	@include standard-button
+}

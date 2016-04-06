@@ -1,0 +1,11 @@
+$primary:#2980b9;
+$accent:#3498db;
+$secondary:#95a5a6;
+$foreground:#8e44ad;
+$background:#bdc3c7;
+
+$darkPurple: $foreground;
+
+$primary-darken:mix(black, $primary, 30%);
+$primary-lighten:mix(white, $primary, 30%);
+
