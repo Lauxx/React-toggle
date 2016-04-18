@@ -77,6 +77,7 @@ getRandomBlogId: function() {
 
 },
 
+*generates comments with faker 
 
 createComments: function(){
 	for (var i = 0; i < 20; i++){
