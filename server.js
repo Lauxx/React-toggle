@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/fish');
 var fishRoutes = require('./routes/fish');
 
+var fakeStuff = require('./data_faker.js').createFish();
 var beerRoutes = require('./routes/beer');
 
 

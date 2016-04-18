@@ -39,7 +39,7 @@ var FishBox = React.createClass({
 			return null
 		}
 	},
-
+	
 	showComp: function(){
 		//console.log(this.state.activeComponent);
 		console.log(this.state.activeFishId);
