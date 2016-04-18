@@ -21,8 +21,8 @@ module.exports = {
 
 
 /* 
-if we had users do this to fake some data:
-within the module.exports include the following:
+*if we had users do this to fake some data:
+*within the module.exports include the following:
 
 createUsers = function(){
 	for (var i = 0; i < 20; i++){
@@ -36,8 +36,59 @@ createUsers = function(){
 	user.save();
 
 	};
-}
+},
 
+
+*able to get a random user id to link users to comments or whatever
+
+getRandomUserId: function() {
+
+   User.count().exec(function(err, count){
+
+       var random = Math.floor(Math.random() * count);
+
+       User.findOne().skip(random).exec(
+         function (err, result) {
+
+           return result._id
+
+       });
+
+   });
+
+ },
+
+
+*generates a random blog id to link user to comments to blog
+
+getRandomBlogId: function() {
+	Blog.count().exec(function(err, count){
+
+       var random = Math.floor(Math.random() * count);
+
+       Blog.findOne().skip(random).exec(
+         function (err, result) {
+
+           return result._id
+
+       });
+
+   });
+
+},
+
+
+createComments: function(){
+	for (var i = 0; i < 20; i++){
+		var comment = new Comment({
+			body: faker.lorem.sentence(),
+			date: faker.date.recent(),
+			blog: this.getRandomBlogId(),
+			user: this.getRandomUserId()
+		});
+		comment.save();
+	};
+},
 
 
 */
